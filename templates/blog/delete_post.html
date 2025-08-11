@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delete post</title>
+</head>
+<body>
+<h1> ARE YOU SURE?</h1>
+ are you sure you want to delete post with id = {{ post.id }}?
+<form action method="POST">
+    {% csrf_token %}
+    <input type="submit" value="yes">
+</form>
+</body>
+</html>

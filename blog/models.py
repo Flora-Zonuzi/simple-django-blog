@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 
 # Create your models here.
 class Post(models.Model):
@@ -21,4 +23,7 @@ class Post(models.Model):
     # status = models.BooleanField(default=False) # pishnahad khod django
     status = models.CharField(choices=CHOICES, max_length=3)
     def __str__(self):
-        return f"{self.title} --- {self.author}"
+        return f"{self.title} ----- {self.author}"
+
+    def get_absolute_url(self):
+        return reverse ('post-detail', args=[self.id])

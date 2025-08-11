@@ -9,9 +9,14 @@
         <h1> {{ post.title }}</h1>
         <h2> {{ post.author }}</h2>
         <p>  {{ post.text }}</p>
+        <p>  status: {{ post.status }}</p>
         <p>  
-            <b> date created: {{ post.date_created}}</b>
-            <b> date modified: {{ post.date_modified}}</b>
+            <b> date created: {{ post.date_created}}</b><br>
+            <b> date modified: {{ post.date_modified}}</b><br>
+        <p>
+        <b> <a href = "{% url 'update_post' post.id %}"> -edit- </a></b>
+        <b> <a href = "{% url 'delete_post' post.id %}"> -delete- </a></b>
+
         </p>
         <p><b>
             

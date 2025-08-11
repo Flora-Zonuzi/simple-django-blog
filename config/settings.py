@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin', # khodam ezafe kardam
-
     'blog',
+    'home',
 ]
 
 MIDDLEWARE = [
