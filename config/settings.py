@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.admin', # khodam ezafe kardam
     'blog',
     'home',
+    'useraccounts',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
+                'django.contrib.auth.context_processors.auth', #این باعث میشه که هر template به صورت خودکار user (و همچنین perms) رو توی context داشته باشه.
                 'django.contrib.messages.context_processors.messages',
             ],
         },
@@ -123,3 +124,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'main_home' # main_home va / yekie, ya name midim ya masir
+LOGOUT_REDIRECT_URL = '/'
+

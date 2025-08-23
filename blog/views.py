@@ -53,6 +53,7 @@ class PostCreateView(generic.CreateView):
     form_class = NewPostForm
     template_name = 'blog/create_post_view.html'
     success_url = reverse_lazy('post_list')
+    # success_url='/blog/'
 
 # def create_post_view(request):
 # #------------------------check konim har kodom chie
@@ -97,7 +98,7 @@ class UpdatePostView(generic.UpdateView):
     form_class = NewPostForm
     template_name = 'blog/create_post_view.html'
     success_url = reverse_lazy('post_list')
-
+#
 # def update_post_view(request, id):
 #     post = get_object_or_404(Post, id=id)
 #     form = NewPostForm(request.POST or None, instance=post)
